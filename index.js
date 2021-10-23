@@ -2,7 +2,7 @@ const vk = require("./core/vk");
 const fs = require("fs");
 
 function loadCommands() {
-    let commands = fs.readdirSync("./core/commands");
+    const commands = fs.readdirSync("./core/commands");
     commands.map((file) => {
         console.log(`Loading command ${file}`)
         const command = require(`./core/commands/${file}`)
